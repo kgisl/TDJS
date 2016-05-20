@@ -4,5 +4,5 @@
 (function(){
     "use strict";
 
-    console.log("hello WORLD");
+    console.log("\n\nBuild OK!");
 }());
