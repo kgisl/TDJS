@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo node_modules/.bin/jake $*
+node_modules/.bin/jake $*
