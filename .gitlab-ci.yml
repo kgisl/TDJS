@@ -1,7 +1,7 @@
 dev:
  script:
     - echo "Npm installation"
-    - sudo npm install 
+    - npm install 
     - echo "run build"
     - jake.sh -f jakefile.js
     - echo "sonar Test"
