@@ -1,4 +1,5 @@
-script:
+dev:
+ script:
     - echo "Npm installation"
     - npm install jake -g
     - echo "run build"
