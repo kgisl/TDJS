@@ -1,9 +1,9 @@
 dev:
  script:
     - echo "Npm installation"
-    - sudo npm install jake -g
+    - sudo npm install 
     - echo "run build"
-    - sudo jake.sh -f jakefile.js
+    - jake.sh -f jakefile.js
     - echo "sonar Test"
     - /opt/sonar-scanner-2.6.1/bin/sonar-runner -e -Dsonar.host.url=http://127.0.0.1:8090/ -Dsonar.login=admin -Dsonar.password=admin
 
