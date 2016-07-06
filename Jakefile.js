@@ -7,7 +7,7 @@
     var semver=require("semver");
     
     desc("Default Build");
-    task("default",["version"],function(){
+    task("default",["version","lint"],function(){
         console.log("\n\nBuild OK!");
     });
     
@@ -25,5 +25,12 @@
     	}
     	
     });
+    
+    desc("Lint Javascript code");
+    task("lint",function(){
+    	console.log("linting Javascript: .");
+    	jake.exec("node node_modules/jshint/bin/jshint Jakefile.js",{interactive : true},complete);
+    	
+    },{async:true});
 
 }());
