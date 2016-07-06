@@ -3,3 +3,8 @@
 
 #npm 
 node_modules/**/.bin/
+
+#Eclipse
+.project
+.settings/
+
