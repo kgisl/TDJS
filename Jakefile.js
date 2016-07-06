@@ -3,7 +3,9 @@
  */
 (function(){
     "use strict";
-
+    
+    var semver=require("semver");
+    
     desc("Default Build");
     task("default",["version"],function(){
         console.log("\n\nBuild OK!");
@@ -14,11 +16,11 @@
     	console.log("checking Node Version: .");
     	
     	var jsonPackage=require("./package.json");
-    	var expectedVersion = "v"+jsonPackage.engines.node;
+    	var expectedVersion = jsonPackage.engines.node;
     	
     	var actualVersion=process.version;
     	
-    	if(actualVersion!==expectedVersion) {
+    	if(semver.neq(actualVersion,expectedVersion)) {
     		fail("Node Version incorrect: expected "+expectedVersion+" actual "+actualVersion);
     	}
     	
