@@ -66,7 +66,13 @@
     			browser: true
     		},
     		globals:{
-    			
+    			//Mocha
+    			describe:false,
+    			it:false,
+    			before:false,
+    			after:false,
+    			beforeEach:false,
+    			afterEach:false
     		}
     	},complete,fail);
     	//jake.exec("node node_modules/jshint/bin/jshint Jakefile.js",{interactive : true},complete);
