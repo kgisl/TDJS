@@ -37,11 +37,10 @@
     	console.log("checking Node Version: .");
     	
     	var jsonPackage=require("./package.json");
-    	var expectedVersion = 0.8.24;//jsonPackage.engines.node;
-    	
+    	var expectedVersion = "0.8.24";  	
     	var actualVersion=process.version;
     	
-    	if(semver.neq(actualVersion,expectedVersion)) {
+    	if(semver.lt(actualVersion,expectedVersion)) {
     		fail("Node Version incorrect: expected "+expectedVersion+" actual "+actualVersion);
     	}
     	
