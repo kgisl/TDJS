@@ -37,7 +37,7 @@
     	console.log("checking Node Version: .");
     	
     	var jsonPackage=require("./package.json");
-    	var expectedVersion = jsonPackage.engines.node;
+    	var expectedVersion = 0.8.24;//jsonPackage.engines.node;
     	
     	var actualVersion=process.version;
     	
