@@ -1,2 +1,10 @@
 # webstrom
 .idea/workspace.xml
+
+#npm 
+node_modules/**/.bin/
+
+#Eclipse
+.project
+.settings/
+

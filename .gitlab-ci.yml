@@ -1,0 +1,10 @@
+image: node:4.2.2
+
+
+all_tests:
+  script:
+   - npm install
+   - ./jake.sh -f jakefile.js
+   - echo "sonar Test"
+   - /opt/sonar-scanner-2.6.1/bin/sonar-runner -e -Dsonar.host.url=http://127.0.0.1:8090/ -Dsonar.login=admin -Dsonar.password=admin
+
